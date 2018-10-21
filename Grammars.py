@@ -1,29 +1,37 @@
 import random as rd
 
-# Our Grammar rules
+# Example Grammar rules
 rules = {
     "S":[ 
         ["The", "N", "V"] 
     ], 
     "N":[ 
-        ["cat"],
-        ["dog"],
-        ["tiger"]
+        ["Adj","cat"],
+        ["Adj","dog"],
+        ["Adj","tiger"]
     ],
     "V":[ 
-        ["Adj", "meow", "cat"],
-        ["Adj","barks", "A"],
-        ["Adj","moo", "A"]
+        ["meows", "A"],
+        ["barks", "A"],
+        ["moos", "A"]
     ],
     "Adj": [
-        ["Stinky"]
+        ["Stinky"],
+        ["Giant"],
+        ["Blue"]
     ],
     "A": [
-        ["and", "the", "black", "N", "sings"]
+        ["and", "the", "N", "Va"]
+    ],
+    "Va": [
+        ["sings"],
+        ["yawns"],
+        ["eats grass"]
     ]
 }
 
-# Contributed by Tigermoo
+# Contributed by Tiger Sachase
+# Used to parse any list of strings and insert them in place in a list 
 def generate_items(items):
     for item in items:
         if isinstance(item, list):
@@ -48,11 +56,10 @@ def expansion(start):
     return result
 
 
-
-raw = ["S"]
-result = [item for item in generate_items(raw)]
-print(result)
-result = expansion(result)
-print(result)
+# An example test you can run to see it at work
+result = ["S"]
+print(result) # Print our starting result
+result = expansion(result) # Expand our algorithim 
+print(result) # Print the final result
 
     
