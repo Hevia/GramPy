@@ -14,7 +14,7 @@ If you're new to using CFG's for text generation Daniel Shiffman's video on the 
 ## How to use
 * Our "Rules" dict is composed of a string key and is a list of lists
 * The generate_items() function is used to insert our list of strings element by element. 
-* The expansion() function takes an input list and compares each element to see if it is one of our Rules. If so it then randomly selects a corresponding list from that key value and replaces it. After the initial for loop we perform another check to make sure our list has expanded correctly
+* The expansion() function takes an input list and compares each element to see if it is one of our Rule's keys. If so it then randomly selects a corresponding list from that key value and replaces it in the list. After the initial for loop we perform another check to make sure our list has expanded correctly and if so we call it recursively until our list contains no more non-terminal values
 
 
 ## What to do
