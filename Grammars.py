@@ -56,10 +56,15 @@ def expansion(start):
     return result
 
 
+def to_string(result):
+    return ' '.join(result)
+
+
 # An example test you can run to see it at work
 result = ["S"]
 print(result) # Print our starting result
 result = expansion(result) # Expand our starting list 
-print(result) # Print the final result
+final = to_string(result)
+print(final) # Print the final result
 
     
