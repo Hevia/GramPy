@@ -20,4 +20,3 @@ If you're new to using CFG's for text generation Daniel Shiffman's video on the 
 ## What to do
 * Provide more detailed examples of using GramPy with more then just text 
 * Provide functions to read and import grammars from JSON, and CSV values
-* Correct the output so it outputs as a string not a list
